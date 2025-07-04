@@ -1,0 +1,96 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-functionality;valid-login",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Valid login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 900342249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user navigates to the login page",
+            "match": {
+              "location": "tests/stepDefinitions/LoginSteps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1597976708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user enters \"admin@covergo.com1\" and \"zVx*bV3Yh2zHJHJYdkwm\"",
+            "match": {
+              "location": "tests/stepDefinitions/LoginSteps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1403489749
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "user should be redirected to the dashboard",
+            "match": {
+              "location": "tests/stepDefinitions/LoginSteps.ts:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5006503499,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/ledangtoanthang/Automation/covergo-playwright/playwright-bdd-framework/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:608:17)\n    at processTimers (node:internal/timers:543:7)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 198643125
+            },
+            "embeddings": [
+              {
+                "data": "Screenshot saved at: reports/screenshots/Valid_login_FAILED_2025_07_04_11_26.png",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-functionality",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Login functionality",
+    "tags": [
+      {
+        "name": "@login",
+        "line": 1
+      }
+    ],
+    "uri": "tests/features/login.feature"
+  }
+]
