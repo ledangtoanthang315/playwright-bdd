@@ -27,3 +27,12 @@ Then('user should be redirected to the dashboard', async function () {
   await expect(this.page).toHaveURL(/.*dashboard/);
 
 });
+
+Then('an {string} error message should be displayed', async function (expectedMessage: string) {
+  // Locate the error message element by its text.
+  // This is a robust locator that finds an element containing the specific text.
+  const errorMessage = this.page.locator(`text=${expectedMessage}`);
+
+  // Assert that the error message is visible on the page.
+  await expect(errorMessage).toBeVisible();
+});

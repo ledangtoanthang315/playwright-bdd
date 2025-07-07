@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 775346041
+              "duration": 968121040
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1480244416
+              "duration": 1832661167
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1924780958
+              "duration": 2471089249
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1873882708
+              "duration": 1882314999
             }
           },
           {
@@ -61,11 +61,11 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 242997207
+              "duration": 253558333
             },
             "embeddings": [
               {
-                "data": "Screenshot saved at: reports/screenshots/Verify_user_login_to_Admin_Portal_with_multiple_credentials_PASSED_2025_07_07_10_12.png",
+                "data": "Screenshot saved at: reports/screenshots/Verify_user_login_to_Admin_Portal_with_multiple_credentials_PASSED_2025_07_07_10_40.png",
                 "mime_type": "text/plain"
               }
             ]
@@ -81,57 +81,133 @@
       },
       {
         "description": "",
-        "id": "login-functionality;verify-user-login-to-admin-portal-with-multiple-credentials",
+        "id": "login-functionality;verify-user-login-to-member-portal-with-multiple-credentials",
         "keyword": "Scenario Outline",
-        "line": 12,
-        "name": "Verify user login to Admin Portal with multiple credentials",
+        "line": 20,
+        "name": "Verify user login to Member Portal with multiple credentials",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 591925667
+              "duration": 539244332
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
+            "line": 14,
+            "name": "user navigates to Member Portal login page",
+            "match": {
+              "location": "tests/stepDefinitions/LoginSteps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1610304249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "user enters \"thanG.Le+202507012008\" and \"Covergo2017@\" to Member Portal",
+            "match": {
+              "location": "tests/stepDefinitions/LoginSteps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1911250083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "user should be redirected to the dashboard",
+            "match": {
+              "location": "tests/stepDefinitions/LoginSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4877207708
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 281120915
+            },
+            "embeddings": [
+              {
+                "data": "Screenshot saved at: reports/screenshots/Verify_user_login_to_Member_Portal_with_multiple_credentials_PASSED_2025_07_07_10_40.png",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;verify-error-message-for-invalid-admin-portal-login",
+        "keyword": "Scenario Outline",
+        "line": 29,
+        "name": "Verify error message for invalid Admin Portal login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 405468082
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
             "name": "user navigates to Admin Portal login page",
             "match": {
               "location": "tests/stepDefinitions/LoginSteps.ts:6"
             },
             "result": {
               "status": "passed",
-              "duration": 1663141707
+              "duration": 1784639166
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 6,
+            "line": 24,
             "name": "user enters \"user2@covergo.com\" and \"some_other_password\" to Admin Portal",
             "match": {
               "location": "tests/stepDefinitions/LoginSteps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 1870582792
+              "duration": 1367588166
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 7,
-            "name": "user should be redirected to the dashboard",
+            "line": 25,
+            "name": "an \"Invalid username or password\" error message should be displayed",
             "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:26"
+              "location": "tests/stepDefinitions/LoginSteps.ts:31"
             },
             "result": {
-              "status": "failed",
-              "duration": 5002447083,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/ledangtoanthang/Automation/covergo-playwright/playwright-bdd-framework/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:608:17)\n    at processTimers (node:internal/timers:543:7)"
+              "status": "passed",
+              "duration": 362797832
             }
           },
           {
@@ -139,11 +215,11 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 201455333
+              "duration": 914688582
             },
             "embeddings": [
               {
-                "data": "Screenshot saved at: reports/screenshots/Verify_user_login_to_Admin_Portal_with_multiple_credentials_FAILED_2025_07_07_10_12.png",
+                "data": "Screenshot saved at: reports/screenshots/Verify_error_message_for_invalid_Admin_Portal_login_PASSED_2025_07_07_10_41.png",
                 "mime_type": "text/plain"
               }
             ]
@@ -159,134 +235,56 @@
       },
       {
         "description": "",
-        "id": "login-functionality;verify-user-login-to-member-portal-with-multiple-credentials",
+        "id": "login-functionality;verify-error-message-for-invalid-member-portal-login",
         "keyword": "Scenario Outline",
-        "line": 21,
-        "name": "Verify user login to Member Portal with multiple credentials",
+        "line": 38,
+        "name": "Verify error message for invalid Member Portal login",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 541360832
+              "duration": 406312416
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 15,
+            "line": 32,
             "name": "user navigates to Member Portal login page",
             "match": {
               "location": "tests/stepDefinitions/LoginSteps.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 702739084
+              "duration": 1588492125
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 16,
-            "name": "user enters \"202506181102\" and \"Covergo2017@\" to Member Portal",
-            "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1451362208
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 17,
-            "name": "user should be redirected to the dashboard",
-            "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:26"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3877912625
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 228050250
-            },
-            "embeddings": [
-              {
-                "data": "Screenshot saved at: reports/screenshots/Verify_user_login_to_Member_Portal_with_multiple_credentials_PASSED_2025_07_07_10_12.png",
-                "mime_type": "text/plain"
-              }
-            ]
-          }
-        ],
-        "tags": [
-          {
-            "name": "@login",
-            "line": 1
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "login-functionality;verify-user-login-to-member-portal-with-multiple-credentials",
-        "keyword": "Scenario Outline",
-        "line": 22,
-        "name": "Verify user login to Member Portal with multiple credentials",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 522073334
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 15,
-            "name": "user navigates to Member Portal login page",
-            "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:16"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 764737666
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 16,
+            "line": 33,
             "name": "user enters \"user2@covergo.com\" and \"some_other_password\" to Member Portal",
             "match": {
               "location": "tests/stepDefinitions/LoginSteps.ts:21"
             },
             "result": {
               "status": "passed",
-              "duration": 904121332
+              "duration": 1412144958
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 17,
-            "name": "user should be redirected to the dashboard",
+            "line": 34,
+            "name": "an \"Invalid username or password\" error message should be displayed",
             "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:26"
+              "location": "tests/stepDefinitions/LoginSteps.ts:31"
             },
             "result": {
-              "status": "failed",
-              "duration": 5000325041,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/ledangtoanthang/Automation/covergo-playwright/playwright-bdd-framework/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:608:17)\n    at processTimers (node:internal/timers:543:7)"
+              "status": "passed",
+              "duration": 870645958
             }
           },
           {
@@ -294,11 +292,11 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 222787541
+              "duration": 197653042
             },
             "embeddings": [
               {
-                "data": "Screenshot saved at: reports/screenshots/Verify_user_login_to_Member_Portal_with_multiple_credentials_FAILED_2025_07_07_10_12.png",
+                "data": "Screenshot saved at: reports/screenshots/Verify_error_message_for_invalid_Member_Portal_login_PASSED_2025_07_07_10_41.png",
                 "mime_type": "text/plain"
               }
             ]
