@@ -4,43 +4,43 @@
     "elements": [
       {
         "description": "",
-        "id": "login-functionality;valid-login",
-        "keyword": "Scenario",
-        "line": 4,
-        "name": "Valid login",
+        "id": "login-functionality;verify-user-login-to-admin-portal-with-multiple-credentials",
+        "keyword": "Scenario Outline",
+        "line": 11,
+        "name": "Verify user login to Admin Portal with multiple credentials",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 900342249
+              "duration": 775346041
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 5,
-            "name": "user navigates to the login page",
+            "name": "user navigates to Admin Portal login page",
             "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:5"
+              "location": "tests/stepDefinitions/LoginSteps.ts:6"
             },
             "result": {
               "status": "passed",
-              "duration": 1597976708
+              "duration": 1480244416
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 6,
-            "name": "user enters \"admin@covergo.com1\" and \"zVx*bV3Yh2zHJHJYdkwm\"",
+            "name": "user enters \"admin@covergo.com\" and \"zVx*bV3Yh2zHJHJYdkwm\" to Admin Portal",
             "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:10"
+              "location": "tests/stepDefinitions/LoginSteps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 1403489749
+              "duration": 1924780958
             }
           },
           {
@@ -49,11 +49,88 @@
             "line": 7,
             "name": "user should be redirected to the dashboard",
             "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:15"
+              "location": "tests/stepDefinitions/LoginSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1873882708
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 242997207
+            },
+            "embeddings": [
+              {
+                "data": "Screenshot saved at: reports/screenshots/Verify_user_login_to_Admin_Portal_with_multiple_credentials_PASSED_2025_07_07_10_12.png",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;verify-user-login-to-admin-portal-with-multiple-credentials",
+        "keyword": "Scenario Outline",
+        "line": 12,
+        "name": "Verify user login to Admin Portal with multiple credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 591925667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user navigates to Admin Portal login page",
+            "match": {
+              "location": "tests/stepDefinitions/LoginSteps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1663141707
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user enters \"user2@covergo.com\" and \"some_other_password\" to Admin Portal",
+            "match": {
+              "location": "tests/stepDefinitions/LoginSteps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1870582792
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "user should be redirected to the dashboard",
+            "match": {
+              "location": "tests/stepDefinitions/LoginSteps.ts:26"
             },
             "result": {
               "status": "failed",
-              "duration": 5006503499,
+              "duration": 5002447083,
               "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/ledangtoanthang/Automation/covergo-playwright/playwright-bdd-framework/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:608:17)\n    at processTimers (node:internal/timers:543:7)"
             }
           },
@@ -62,11 +139,166 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 198643125
+              "duration": 201455333
             },
             "embeddings": [
               {
-                "data": "Screenshot saved at: reports/screenshots/Valid_login_FAILED_2025_07_04_11_26.png",
+                "data": "Screenshot saved at: reports/screenshots/Verify_user_login_to_Admin_Portal_with_multiple_credentials_FAILED_2025_07_07_10_12.png",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;verify-user-login-to-member-portal-with-multiple-credentials",
+        "keyword": "Scenario Outline",
+        "line": 21,
+        "name": "Verify user login to Member Portal with multiple credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 541360832
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "user navigates to Member Portal login page",
+            "match": {
+              "location": "tests/stepDefinitions/LoginSteps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 702739084
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "user enters \"202506181102\" and \"Covergo2017@\" to Member Portal",
+            "match": {
+              "location": "tests/stepDefinitions/LoginSteps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1451362208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "user should be redirected to the dashboard",
+            "match": {
+              "location": "tests/stepDefinitions/LoginSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3877912625
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 228050250
+            },
+            "embeddings": [
+              {
+                "data": "Screenshot saved at: reports/screenshots/Verify_user_login_to_Member_Portal_with_multiple_credentials_PASSED_2025_07_07_10_12.png",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;verify-user-login-to-member-portal-with-multiple-credentials",
+        "keyword": "Scenario Outline",
+        "line": 22,
+        "name": "Verify user login to Member Portal with multiple credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 522073334
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "user navigates to Member Portal login page",
+            "match": {
+              "location": "tests/stepDefinitions/LoginSteps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 764737666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "user enters \"user2@covergo.com\" and \"some_other_password\" to Member Portal",
+            "match": {
+              "location": "tests/stepDefinitions/LoginSteps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 904121332
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "user should be redirected to the dashboard",
+            "match": {
+              "location": "tests/stepDefinitions/LoginSteps.ts:26"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5000325041,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/ledangtoanthang/Automation/covergo-playwright/playwright-bdd-framework/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:608:17)\n    at processTimers (node:internal/timers:543:7)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 222787541
+            },
+            "embeddings": [
+              {
+                "data": "Screenshot saved at: reports/screenshots/Verify_user_login_to_Member_Portal_with_multiple_credentials_FAILED_2025_07_07_10_12.png",
                 "mime_type": "text/plain"
               }
             ]

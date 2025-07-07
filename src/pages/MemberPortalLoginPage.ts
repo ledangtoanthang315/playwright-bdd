@@ -1,6 +1,6 @@
 import { type Locator, type Page } from '@playwright/test';
 
-export class LoginPage {
+export class MemberPortalLoginPage {
   // Define properties for the page and locators
   readonly page: Page;
   readonly usernameField: Locator;
@@ -18,7 +18,7 @@ export class LoginPage {
   }
 
   async navigate() {
-    await this.page.goto('https://asia-admin.preprod.asia.covergo.cloud/login');
+    await this.page.goto('https://asia-member.preprod.asia.covergo.cloud/login');
   }
 
   async login(username: string, password: string) {
