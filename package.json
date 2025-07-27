@@ -2,10 +2,9 @@
   "name": "playwright-bdd-framework",
   "version": "1.0.0",
   "scripts": {
-    "test": "cucumber-js",
-    "test:login": "npm run test:login:only || true && npm run report",
-    "test:login:only": "cucumber-js tests/features/login.feature --require-module ts-node/register --require tests/stepDefinitions/**/*.ts --require tests/support/**/*.ts --format json:./reports/cucumber-report.json",
-    "test:tags": "cucumber-js --require-module ts-node/register --require tests/**/*.ts --format json:./reports/cucumber-report.json --tags",
+    "test": "npx cucumber-js",
+    "test:proposal": "npx cucumber-js tests/features/proposal.feature",
+    "test:tags": "npx cucumber-js --tags",
     "report": "node report-config.js"
   },
   "devDependencies": {

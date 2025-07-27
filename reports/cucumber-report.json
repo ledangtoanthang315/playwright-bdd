@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "login-functionality;verify-user-login-to-admin-portal-with-multiple-credentials",
-        "keyword": "Scenario Outline",
-        "line": 11,
-        "name": "Verify user login to Admin Portal with multiple credentials",
+        "id": "proposal-management;successfully-create-a-new-proposal",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Successfully create a new proposal",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 968121040
+              "duration": 1309990291
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1832661167
+              "duration": 2071078166
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2471089249
+              "duration": 1933467292
             }
           },
           {
@@ -53,84 +53,101 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1882314999
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 253558333
-            },
-            "embeddings": [
-              {
-                "data": "Screenshot saved at: reports/screenshots/Verify_user_login_to_Admin_Portal_with_multiple_credentials_PASSED_2025_07_07_10_40.png",
-                "mime_type": "text/plain"
-              }
-            ]
-          }
-        ],
-        "tags": [
-          {
-            "name": "@login",
-            "line": 1
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "login-functionality;verify-user-login-to-member-portal-with-multiple-credentials",
-        "keyword": "Scenario Outline",
-        "line": 20,
-        "name": "Verify user login to Member Portal with multiple credentials",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 539244332
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 14,
-            "name": "user navigates to Member Portal login page",
-            "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:16"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1610304249
+              "duration": 1893675540
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 15,
-            "name": "user enters \"thanG.Le+202507012008\" and \"Covergo2017@\" to Member Portal",
+            "line": 10,
+            "name": "the user navigates to \"Proposals\" using the sidebar",
             "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:21"
+              "location": "tests/stepDefinitions/ProposalSteps.ts:20"
             },
             "result": {
               "status": "passed",
-              "duration": 1911250083
+              "duration": 842688041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "the user clicks the Create Proposal button",
+            "match": {
+              "location": "tests/stepDefinitions/ProposalSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 223047791
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "agentSearchTerm",
+                      "agentFullName",
+                      "name",
+                      "industry",
+                      "employeeCount",
+                      "effectiveDate",
+                      "endDate",
+                      "paymentMode"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "AIDApr18",
+                      "AIDApr18 - Thang Agent",
+                      "[dynamic_proposal_name]",
+                      "Mining of coal and lignite",
+                      "1",
+                      "01/07/2025",
+                      "30/06/2026",
+                      "Quarterly"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 12,
+            "name": "the user fills out the new proposal form with the following details:",
+            "match": {
+              "location": "tests/stepDefinitions/ProposalSteps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1196946958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "the user submits the proposal form",
+            "match": {
+              "location": "tests/stepDefinitions/ProposalSteps.ts:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41595208
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 16,
-            "name": "user should be redirected to the dashboard",
+            "name": "a \"Proposal has been created successfully!\" message should be displayed",
             "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:26"
+              "location": "tests/stepDefinitions/ProposalSteps.ts:66"
             },
             "result": {
               "status": "passed",
-              "duration": 4877207708
+              "duration": 2880991207
             }
           },
           {
@@ -138,11 +155,11 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 281120915
+              "duration": 653668625
             },
             "embeddings": [
               {
-                "data": "Screenshot saved at: reports/screenshots/Verify_user_login_to_Member_Portal_with_multiple_credentials_PASSED_2025_07_07_10_40.png",
+                "data": "Screenshot saved at: reports/screenshots/Successfully_create_a_new_proposal_PASSED_2025_07_27_17_11.png",
                 "mime_type": "text/plain"
               }
             ]
@@ -150,177 +167,23 @@
         ],
         "tags": [
           {
-            "name": "@login",
-            "line": 1
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "login-functionality;verify-error-message-for-invalid-admin-portal-login",
-        "keyword": "Scenario Outline",
-        "line": 29,
-        "name": "Verify error message for invalid Admin Portal login",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 405468082
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 23,
-            "name": "user navigates to Admin Portal login page",
-            "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:6"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1784639166
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 24,
-            "name": "user enters \"user2@covergo.com\" and \"some_other_password\" to Admin Portal",
-            "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1367588166
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 25,
-            "name": "an \"Invalid username or password\" error message should be displayed",
-            "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:31"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 362797832
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 914688582
-            },
-            "embeddings": [
-              {
-                "data": "Screenshot saved at: reports/screenshots/Verify_error_message_for_invalid_Admin_Portal_login_PASSED_2025_07_07_10_41.png",
-                "mime_type": "text/plain"
-              }
-            ]
-          }
-        ],
-        "tags": [
-          {
-            "name": "@login",
-            "line": 1
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "login-functionality;verify-error-message-for-invalid-member-portal-login",
-        "keyword": "Scenario Outline",
-        "line": 38,
-        "name": "Verify error message for invalid Member Portal login",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 406312416
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 32,
-            "name": "user navigates to Member Portal login page",
-            "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:16"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1588492125
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 33,
-            "name": "user enters \"user2@covergo.com\" and \"some_other_password\" to Member Portal",
-            "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1412144958
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 34,
-            "name": "an \"Invalid username or password\" error message should be displayed",
-            "match": {
-              "location": "tests/stepDefinitions/LoginSteps.ts:31"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 870645958
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 197653042
-            },
-            "embeddings": [
-              {
-                "data": "Screenshot saved at: reports/screenshots/Verify_error_message_for_invalid_Member_Portal_login_PASSED_2025_07_07_10_41.png",
-                "mime_type": "text/plain"
-              }
-            ]
-          }
-        ],
-        "tags": [
-          {
-            "name": "@login",
+            "name": "@proposal",
             "line": 1
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "login-functionality",
+    "id": "proposal-management",
     "line": 2,
     "keyword": "Feature",
-    "name": "Login functionality",
+    "name": "Proposal Management",
     "tags": [
       {
-        "name": "@login",
+        "name": "@proposal",
         "line": 1
       }
     ],
-    "uri": "tests/features/login.feature"
+    "uri": "tests/features/proposal.feature"
   }
 ]

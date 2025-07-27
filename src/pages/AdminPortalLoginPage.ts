@@ -1,4 +1,4 @@
-import { type Locator, type Page } from '@playwright/test';
+import { type Page, type Locator } from '@playwright/test';
 
 export class AdminPortalLoginPage {
   // Define properties for the page and locators
